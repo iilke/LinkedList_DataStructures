@@ -58,7 +58,7 @@ public class LinkedList {
         }
 
         current = current.next; //to delete the requested index from user
-        //not sure why other resources say it's "previous.next = current.nex"
+        //not sure why other resources say it's "previous.next = current.next"
     }
 
 
