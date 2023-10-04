@@ -21,7 +21,7 @@ public class LinkedList {
             while(n.next != null){
                 n = n.next;
             }
-            n.next = newNode;
+            n.next = newNode;  //we are creating a node at the end of the list
         }
 
 
@@ -29,6 +29,46 @@ public class LinkedList {
         newNode.next = null;
 
     }
+
+
+
+    public void deleteByIndex(int index){
+
+        if(index == 0){//if the first object is being deleted
+            if(head != null){//if there is at least one object
+                Node headCopy = head;
+                head = headCopy.next;
+            }
+            else{ //if it's an empty list
+                System.out.println("List is empty.");
+            }
+        }
+
+        Node previous = null;
+        Node current = head;
+
+        for(int i=0 ; i<index ; i++){
+            if(current == null){
+                System.out.println("There is no such an index.");
+                return;
+            }
+
+            previous = current;
+            current = current.next;
+        }
+
+        current = current.next; //to delete the requested index from user
+        //not sure why other resources say it's "previous.next = current.nex"
+    }
+
+
+
+
+    public void deleteByData(int data){
+
+    }
+
+
 
 
 

@@ -1,6 +1,8 @@
-//İlke, 03.10.2023
-//add these next time: insertFirst, deleteAtIndex
+//İlke, 03.10.2023 started
+//add these next time: insertFirst, deleteByIndex, deleteByData
 //extra: remake the list backwards
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +20,18 @@ public class Main {
         myLinkedList.insertLast(1);
         myLinkedList.insertLast(2);
         myLinkedList.insertLast(3);
+        myLinkedList.insertLast(4);
+
+        myLinkedList.printTheList(myLinkedList);
+
+        System.out.println();
+
+        //******************************************************************************************************
+        System.out.println("Deleting by index: Print the index that you want to delete data from:");
+        Scanner sc = new Scanner(System.in);
+        int  index = sc.nextInt();
+
+        myLinkedList.deleteByIndex(index);
 
         myLinkedList.printTheList(myLinkedList);
 
