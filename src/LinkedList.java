@@ -32,12 +32,13 @@ public class LinkedList {
 
 
 
-    public void deleteByIndex(int index){
+    public void deleteByIndex(int index){ // to be updated: this method will be a bool so error mesages will turn false.
 
         if(index == 0){//if the first object is being deleted
             if(head != null){//if there is at least one object
                 Node headCopy = head;
                 head = headCopy.next;
+                return;
             }
             else{ //if it's an empty list
                 System.out.println("List is empty.");
@@ -57,15 +58,32 @@ public class LinkedList {
             current = current.next;
         }
 
-        current = current.next; //to delete the requested index from user
-        //not sure why other resources say it's "previous.next = current.next"
+        previous.next = current.next; // because we are eliminating the current here.
     }
 
 
 
 
-    public void deleteByData(int data){
+    public void deleteByData(int data){ //taking data itself as a parameter, deleting it, giving feedback to user at what index it was
+        Node travelingHead = head;
 
+
+        while(travelingHead != null){
+            if(travelingHead.getData() == (data)){
+
+
+                return;
+            }
+
+            travelingHead = travelingHead.next;
+        }
+
+
+        //this area is a prototype rn, not finished
+
+
+
+        System.out.println(data + " is succesfully deleted from the list. It's index was ");
     }
 
 
