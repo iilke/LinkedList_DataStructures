@@ -27,11 +27,17 @@ public class Main {
         System.out.println();
 
         //******************************************************************************************************
-        System.out.println("Deleting by index: Print the index that you want to delete data from (index starts from 0) :");
+        System.out.println("Deleting by index: Print the index that you want to delete data from (index starts from 0) : ");
         Scanner sc = new Scanner(System.in);
         int  index = sc.nextInt();
 
-        myLinkedList.deleteByIndex(index);
+        if(myLinkedList.deleteByIndex(index) == true){
+            System.out.println("Index " + index + " is succesfully deleted from the list.");
+        }
+        else{
+            System.out.println("Deletion unsuccesful.");
+        }
+
 
         myLinkedList.printTheList(myLinkedList);
 

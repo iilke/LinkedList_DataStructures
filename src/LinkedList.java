@@ -32,35 +32,29 @@ public class LinkedList {
 
 
 
-    public void deleteByIndex(int index){ // to be updated: this method will be a bool so error mesages will turn false.
-
-        if(index == 0){//if the first object is being deleted
-            if(head != null){//if there is at least one object
-                Node headCopy = head;
-                head = headCopy.next;
-                return;
-            }
-            else{ //if it's an empty list
-                System.out.println("List is empty.");
-            }
+    public boolean deleteByIndex(int index){
+        if(index == 0){ //in cases that head is being deleted
+            head = head.next;
+            return true;
         }
 
         Node previous = null;
-        Node current = head;
+        Node current = head; //starting from head
 
-        for(int i=0 ; i<index ; i++){
-            if(current == null){
-                System.out.println("There is no such an index.");
-                return;
+            for (int i = 0; i < index; i++) {
+                if(current.next != null){
+                    previous = current;
+                    current = current.next;
+                }
+                else{
+                    return false;
+                }
             }
 
-            previous = current;
-            current = current.next;
-        }
-
-        previous.next = current.next; // because we are eliminating the current here.
+            previous.next = current.next;
+            current = null;
+            return true;
     }
-
 
 
 
