@@ -4,7 +4,7 @@ public class LinkedList {
 
 
 
-    public void insertLast(int data) {
+    public void add(int data) {
 
         Node newNode = new Node();
         newNode.setNext(null);
