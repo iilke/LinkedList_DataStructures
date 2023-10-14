@@ -1,10 +1,10 @@
-public class LinkedList {
+public class LinkedList <T> {
     Node head = null;  //so head will be null in default when a new LinkedList is created by default.
     //so head = null means an empty linked list
+    private T data;
 
 
-
-    public void add(int data) {
+    public void insertLast(T data) {
 
         Node newNode = new Node();
         newNode.setNext(null);
@@ -58,7 +58,7 @@ public class LinkedList {
 
 
 
-    public void deleteByData(int data){ //taking data itself as a parameter, deleting it, giving feedback to user at what index it was
+    public void deleteByData(T data){ //taking data itself as a parameter, deleting it, giving feedback to user at what index it was
         Node travelingHead = head;
 
 

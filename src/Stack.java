@@ -1,10 +1,8 @@
-public class Stack{
+public class Stack <T>{
     Node first;
-    String s;
 
 
-
-    public void push(int data) {
+    public void push(T data) {
         Node oldFirst = first;
         first = new Node();
         first.setData(data);
@@ -21,6 +19,27 @@ public class Stack{
     public boolean isEmpty(){
         return first==null;
     }
+
+    public void peek(){
+        first.getData();
+    }
+
+    public void printStack(){ //new challenge: do this by traversing stack only once
+        Node w;//stands for walk
+        w = first;
+
+        if(first != null){
+            while(w != null){
+                System.out.print(w.getData() + " ");
+                w = w.next;
+            }
+        }
+        else{
+            System.out.println("This stack is empty.");
+        }
+    }
+
+
 
 
 }

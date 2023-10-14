@@ -16,7 +16,7 @@ public class Main {
         //******************************************************************************************************
         System.out.println("Inserting to end by using LinkedList class:");
 
-        LinkedList myLinkedList = new LinkedList();
+        LinkedList<Integer> myLinkedList = new LinkedList();
         myLinkedList.insertLast(1);
         myLinkedList.insertLast(2);
         myLinkedList.insertLast(3);
@@ -26,8 +26,8 @@ public class Main {
 
         System.out.println();
 
-        //******************************************************************************************************
-        System.out.println("Deleting by index: Print the index that you want to delete data from (index starts from 0) : ");
+        //************************************* Deleting from linkedlist *****************************************************************
+        /*System.out.println("Deleting by index: Print the index that you want to delete data from (index starts from 0) : ");
         Scanner sc = new Scanner(System.in);
         int  index = sc.nextInt();
 
@@ -39,7 +39,47 @@ public class Main {
         }
 
 
-        myLinkedList.printTheList(myLinkedList);
+        myLinkedList.printTheList(myLinkedList);*/
+
+
+
+        //************************************************** STACKS **********************************************************************************
+        System.out.println();
+        System.out.println("-Stacks-\n");
+
+        Stack<String> linkedListStack = new Stack<>();
+
+
+        linkedListStack.push("a");
+        linkedListStack.push("b");
+        linkedListStack.push("c");
+        linkedListStack.push("d");
+
+        linkedListStack.pop(); //removes d
+
+
+        linkedListStack.printStack();
+
+
+        //************************************************** QUEUES **********************************************************************************
+        System.out.println();
+        System.out.println("-QUEUES-\n");
+
+        Queue<Double> queueLinkedList = new Queue<>();
+
+        queueLinkedList.add(1.0);
+        queueLinkedList.add(1.1);
+        queueLinkedList.add(1.2);
+        queueLinkedList.add(1.3);
+
+        queueLinkedList.printQueue();
+
+        queueLinkedList.remove();
+        System.out.println("Dequeued: ");
+        queueLinkedList.printQueue();
+
+        System.out.println("peek:");
+        queueLinkedList.peek();
 
 
     }
