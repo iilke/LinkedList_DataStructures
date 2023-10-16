@@ -2,6 +2,7 @@
 //add these next time: insertFirst, deleteByIndex, deleteByData
 //extra: remake the list backwards
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -34,8 +35,30 @@ public class Main {
         myLinkedList.duplicate(2);
         myLinkedList.printTheList(myLinkedList);
 
+        //************************************* Reversing linkedlist *****************************************************************
+        System.out.println("\n");
+        System.out.println("REVERSING LINKEDLIST:");
+
+        LinkedList<Integer> toBeReversedLL = new LinkedList<>();
+        toBeReversedLL.insertLast(1);
+        toBeReversedLL.insertLast(2);
+        toBeReversedLL.insertLast(3);
+        toBeReversedLL.insertLast(4);
 
 
+        toBeReversedLL.printTheList(toBeReversedLL);
+        System.out.println();
+        System.out.println("Reversed:");
+
+        toBeReversedLL.reverse();
+
+
+        toBeReversedLL.printTheList(toBeReversedLL);
+
+
+
+
+        System.out.println();
         //************************************* Deleting from linkedlist *****************************************************************
         /*System.out.println("Deleting by index: Print the index that you want to delete data from (index starts from 0) : ");
         Scanner sc = new Scanner(System.in);

@@ -125,8 +125,19 @@ public class LinkedList <T> {
     }
 
 
-    public void reverse(){
-            
+    public void reverse(){ //study more, rewrite ilke
+        Node<T> prev = null;
+        Node<T> current = head;
+        Node<T> next = null;
+
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        head = prev;
     }
 
 
