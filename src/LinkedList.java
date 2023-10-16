@@ -93,4 +93,42 @@ public class LinkedList <T> {
             headCopy = headCopy.next;
         }
     }
+
+
+    public void swapFirstSecond(){ //for swapping first node and second node, but not data itself
+        //i solved this problem visually by drawing it, so it probably does not make sense reading the code
+
+        Node <T> oldHead = head;
+        head = head.next;
+        oldHead.next = head.next;
+        head.next = oldHead;
+    }
+
+
+    public void duplicate(int i){ //takes an integer i and creates a copy of the ith node after itself in the lis
+        Node <T> newNode = new Node<>();
+        Node <T> w = head;
+        int index = 0;
+
+        while(w != null){
+            if(index == i){
+                Node <T> f = w.next;
+                w.next = newNode;
+                newNode.next = f;
+
+                newNode.setData(w.getData());
+                break;
+            }
+            index++;
+            w = w.next;
+        }
+    }
+
+
+    public void reverse(){
+            
+    }
+
+
+
 }

@@ -26,6 +26,16 @@ public class Main {
 
         System.out.println();
 
+        System.out.println("Swapping first node and second node: ");
+        myLinkedList.swapFirstSecond();
+        myLinkedList.printTheList(myLinkedList);
+
+        System.out.println("Duplicating 2nd variable (which is 3): ");
+        myLinkedList.duplicate(2);
+        myLinkedList.printTheList(myLinkedList);
+
+
+
         //************************************* Deleting from linkedlist *****************************************************************
         /*System.out.println("Deleting by index: Print the index that you want to delete data from (index starts from 0) : ");
         Scanner sc = new Scanner(System.in);
