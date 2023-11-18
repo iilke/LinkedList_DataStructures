@@ -31,7 +31,6 @@ public class LinkedList <T> {
     }
 
 
-
     public boolean deleteByIndex(int index){
         if(index == 0){ //in cases that head is being deleted
             head = head.next;
@@ -125,16 +124,15 @@ public class LinkedList <T> {
     }
 
 
-    public void reverse(){ //study more, rewrite ilke
-        Node<T> prev = null;
-        Node<T> current = head;
-        Node<T> next = null;
+    public void reverse(){
+        Node <T> prev = new Node<>();
 
-        while (current != null) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
+
+        while(head != null){
+            Node <T> next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
         }
 
         head = prev;
